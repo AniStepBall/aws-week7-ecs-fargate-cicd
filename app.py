@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return {
-        "message": "Week 7 ECS Fargate App - v2",
+        "message": "Week 7 ECS Fargate App",
         "hostname": socket.gethostname(),
         "environment": os.getenv("APP_ENV", "dev")
     }
