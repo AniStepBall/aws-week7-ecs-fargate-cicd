@@ -22,11 +22,3 @@ route to the task's IP directly.
 Private subnets with NAT Gateway would be more secure but adds
 ~$32/month in cost. For this project, public subnets with locked-down
 security groups is an acceptable tradeoff.
-
-## Production improvements
-- Private subnets with NAT Gateway
-- HTTPS via ACM certificate on ALB
-- Task definition image updates by exact commit SHA
-- Secrets Manager for environment variables
-- WAF on the ALB
-- CloudWatch Container Insights for logs
