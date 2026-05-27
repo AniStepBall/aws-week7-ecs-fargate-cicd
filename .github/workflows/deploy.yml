@@ -10,6 +10,7 @@ env:
   ECR_REPOSITORY: week7-fargate-app
   ECS_CLUSTER: week7-ecs-cluster
   ECS_SERVICE: week7-fargate-service
+  ECS_TASK_DEFINITION: week7-taks-def
 
 jobs:
   deploy:
@@ -49,3 +50,4 @@ jobs:
           aws ecs wait services-stable \
             --cluster ${{ env.ECS_CLUSTER }} \
             --services ${{ env.ECS_SERVICE }}
+        timeout-minutes: 15
